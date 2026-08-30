@@ -11,7 +11,7 @@ from zoneinfo import ZoneInfo
 MEMBERS = {
     "Sanish Dalvi": {
         "handle": "SanishDalvi",
-        "email": "sanish.dalvi25@pccoepune.org
+        "email": "sanish.dalvi25@pccoepune.org"
     },
     "Veer": {
         "handle": "Example",
