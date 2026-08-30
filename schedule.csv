@@ -29,3 +29,96 @@ Date,Occasion,Problems
 28-09,Day 23,Ugly Number; Count Primes; Backspace String Compare
 29-09,Day 24,Add Digits; Number of 1 Bits; 3Sum
 30-09,Day 25,Reverse Bits; Hamming Distance; Container With Most Water
+01-10,Day 26,Reverse Linked List; Subsets; Subsets II
+02-10,Day 27,Merge Two Sorted Lists; Permutations; Permutations II
+03-10,Day 28,Linked List Cycle; Combinations; Combination Sum
+04-10,Sunday,HOLIDAY
+05-10,Day 29,Palindrome Linked List; Combination Sum II; Letter Combinations of a Phone Number
+06-10,Day 30,Remove Duplicates from Sorted List; Generate Parentheses; Word Search
+07-10,Day 31,Middle of the Linked List; Palindrome Partitioning; Combination Sum III
+08-10,Day 32,Valid Parentheses; Beautiful Arrangement; Binary Search
+09-10,Day 33,Implement Queue using Stacks; First Bad Version; Valid Perfect Square
+10-10,Day 34,Implement Stack using Queues; Search in Rotated Sorted Array; Find Minimum in Rotated Sorted Array
+11-10,Sunday,HOLIDAY
+12-10,Day 35,Min Stack; Search a 2D Matrix; Search a 2D Matrix II
+13-10,Day 36,Add Two Numbers; Find Peak Element; Koko Eating Bananas
+14-10,Day 37,Reverse Linked List; Time Based Key-Value Store; Search in Rotated Sorted Array II
+15-10,Day 38,Merge Two Sorted Lists; Find First and Last Position of Element in Sorted Array; Capacity To Ship Packages Within D Days
+16-10,Day 39,Linked List Cycle; Find K Closest Elements; Median of Two Sorted Arrays
+17-10,Day 40,Palindrome Linked List; Maximum Depth of Binary Tree; Same Tree
+18-10,Sunday,HOLIDAY
+19-10,Day 41,Remove Duplicates from Sorted List; Invert Binary Tree; Symmetric Tree
+20-10,Dussehra,HOLIDAY
+21-10,Day 42,Middle of the Linked List; Path Sum; Balanced Binary Tree
+22-10,Day 43,Valid Parentheses; Minimum Depth of Binary Tree; Binary Tree Preorder Traversal
+23-10,Day 44,Implement Queue using Stacks; Binary Tree Inorder Traversal; Binary Tree Postorder Traversal
+24-10,Day 45,Implement Stack using Queues; Convert Sorted Array to Binary Search Tree; Range Sum of BST
+25-10,Sunday,HOLIDAY
+26-10,Day 46,Min Stack; Two Sum IV - Input is a BST; Diameter of Binary Tree
+27-10,Day 47,Add Two Numbers; Merge Two Binary Trees; Subsets
+28-10,Day 48,Reverse Linked List; Subsets II; Permutations
+29-10,Day 49,Merge Two Sorted Lists; Permutations II; Combinations
+30-10,Day 50,Linked List Cycle; Combination Sum; Combination Sum II
+31-10,Day 51,Palindrome Linked List; Letter Combinations of a Phone Number; Generate Parentheses
+01-11,Sunday,HOLIDAY
+02-11,Day 52,Maximum Depth of Binary Tree; Same Tree; Invert Binary Tree
+03-11,Day 53,Symmetric Tree; Path Sum; Median of Two Sorted Arrays
+04-11,Day 54,Minimum Depth of Binary Tree; Binary Tree Preorder Traversal; Binary Tree Inorder Traversal
+05-11,Day 55,Binary Tree Postorder Traversal; Convert Sorted Array to Binary Search Tree; Trapping Rain Water
+06-11,Day 56,Two Sum IV - Input is a BST; Diameter of Binary Tree; Merge Two Binary Trees
+07-11,Dhanteras,HOLIDAY
+08-11,Diwali,HOLIDAY
+09-11,Bhai Dooj,HOLIDAY
+10-11,Day 57,Binary Tree Level Order Traversal; Binary Tree Zigzag Level Order Traversal; Merge k Sorted Lists
+11-11,Day 58,Kth Smallest Element in a BST; Lowest Common Ancestor of a Binary Search Tree; Lowest Common Ancestor of a Binary Tree
+12-11,Day 59,Binary Tree Right Side View; Construct Binary Tree from Preorder and Inorder Traversal; N-Queens
+13-11,Day 60,Flatten Binary Tree to Linked List; Path Sum II; Sum Root to Leaf Numbers
+14-11,Day 61,Delete Node in a BST; Insert into a Binary Search Tree; Sudoku Solver
+15-11,Sunday,HOLIDAY
+16-11,Day 62,Count Good Nodes in Binary Tree; Serialize and Deserialize Binary Tree; Binary Tree Maximum Path Sum
+17-11,Day 63,Vertical Order Traversal of a Binary Tree; Top K Frequent Elements; Word Search II
+18-11,Day 64,K Closest Points to Origin; Last Stone Weight; Kth Smallest Element in a Sorted Matrix
+19-11,Day 65,Find Median from Data Stream; Reorganize String; Longest Valid Parentheses
+20-11,Day 66,Design Twitter; Number of Islands; Max Area of Island
+21-11,Day 67,Flood Fill; Clone Graph; Largest Rectangle in Histogram
+22-11,Sunday,HOLIDAY
+23-11,Day 68,Course Schedule II; Pacific Atlantic Water Flow; Rotting Oranges
+24-11,Day 69,Surrounded Regions; Redundant Connection; Maximal Rectangle
+25-11,Day 70,01 Matrix; Evaluate Division; Number of Provinces
+26-11,Day 71,Keys and Rooms; All Paths From Source to Target; Best Time to Buy and Sell Stock III
+27-11,Day 72,House Robber II; Maximum Subarray; Jump Game
+28-11,Day 73,Jump Game II; Gas Station; Best Time to Buy and Sell Stock IV
+29-11,Sunday,HOLIDAY
+30-11,Day 74,Longest Increasing Subsequence; Word Break; Decode Ways
+01-12,Day 75,Network Delay Time; Cheapest Flights Within K Stops; Path With Minimum Effort; Median of Two Sorted Arrays
+02-12,Day 76,Course Schedule; Course Schedule II; Burst Balloons; Trapping Rain Water
+03-12,Day 77,Palindrome Partitioning II; Partition to K Equal Sum Subsets; Shortest Path Visiting All Nodes; Merge k Sorted Lists
+04-12,Day 78,Minimum Number of Refueling Stops; Swim in Rising Water; Unique Paths; N-Queens
+05-12,Day 79,Unique Paths II; Minimum Path Sum; Longest Common Subsequence; Sudoku Solver
+06-12,Sunday,HOLIDAY
+07-12,Day 80,Edit Distance; Interleaving String; Target Sum; Word Search II
+08-12,Day 81,Coin Change; Longest Palindromic Subsequence; Maximal Square; Longest Valid Parentheses
+09-12,Day 82,Triangle; Out of Boundary Paths; Distinct Subsequences; Largest Rectangle in Histogram
+10-12,Day 83,Regular Expression Matching; Wildcard Matching; House Robber; Maximal Rectangle
+11-12,Day 84,House Robber II; Maximum Subarray; Jump Game; Best Time to Buy and Sell Stock III
+12-12,Day 85,Jump Game II; Gas Station; Coin Change II; Best Time to Buy and Sell Stock IV
+13-12,Sunday,HOLIDAY
+14-12,Day 86,Longest Increasing Subsequence; Word Break; Decode Ways; Word Ladder
+15-12,Day 87,Partition Equal Subset Sum; Best Time to Buy and Sell Stock II; Best Time to Buy and Sell Stock with Cooldown; Word Ladder II
+16-12,Day 88,Maximum Product Subarray; Longest Palindromic Substring; Palindromic Substrings; Serialize and Deserialize Binary Tree
+17-12,Day 89,Min Cost Climbing Stairs; Non-overlapping Intervals; Merge Intervals; Binary Tree Maximum Path Sum
+18-12,Day 90,Insert Interval; Network Delay Time; Cheapest Flights Within K Stops; Sliding Window Maximum
+19-12,Day 91,Path With Minimum Effort; Course Schedule; Course Schedule II; Minimum Window Substring
+20-12,Sunday,HOLIDAY
+21-12,Day 92,Burst Balloons; Palindrome Partitioning II; Partition to K Equal Sum Subsets; Distinct Subsequences
+22-12,Day 93,Shortest Path Visiting All Nodes; Minimum Number of Refueling Stops; Swim in Rising Water; Regular Expression Matching
+23-12,Day 94,Unique Paths; Unique Paths II; Minimum Path Sum; Wildcard Matching
+24-12,Day 95,Longest Common Subsequence; Edit Distance; Interleaving String; Longest Increasing Path in a Matrix
+25-12,Christmas,HOLIDAY
+26-12,Day 96,Target Sum; Coin Change II; Longest Palindromic Subsequence; Cheapest Flights Within K Stops
+27-12,Sunday,HOLIDAY
+28-12,Day 97,Maximal Square; Triangle; Out of Boundary Paths; Course Schedule III
+29-12,Day 98,Distinct Subsequences; Regular Expression Matching; Wildcard Matching; Split Array Largest Sum
+30-12,Day 99,House Robber; House Robber II; Maximum Subarray; Burst Balloons
+31-12,Day 100,Jump Game; Jump Game II; Gas Station; Palindrome Partitioning II
+```[cite: 1]
