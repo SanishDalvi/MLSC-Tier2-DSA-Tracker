@@ -1,5 +1,5 @@
 import csv
-from datetime import datetime, time
+from datetime import datetime, time, timedelta
 import email.message
 import json
 import os
@@ -8,19 +8,19 @@ import smtplib
 import urllib.request
 from zoneinfo import ZoneInfo
 
-# Add member name, LeetCode handle, and their email address
 MEMBERS = {
     "Sanish Dalvi": {
         "handle": "SanishDalvi",
-        "email": "sanish.dalvi25@pccoepune.org"
+        "email": "sanish.dalvi25@pccoepune.org
     },
     "Veer": {
-        "handle": "Veer",
+        "handle": "Example",
         "email": "veer@example.com"
     },
 }
 
 CSV_FILE = "schedule.csv"
+HISTORY_CSV = "daily_history.csv"
 GRAPHQL_URL = "https://leetcode.com/graphql"
 
 USER_DATA_QUERY = """
@@ -33,7 +33,7 @@ query getUserData($username: String!) {
       }
     }
   }
-  recentAcSubmissionList(username: $username, limit: 30) {
+  recentAcSubmissionList(username: $username, limit: 35) {
     title
     timestamp
   }
@@ -130,6 +130,34 @@ Remember: Consistency is key! Aim to finish before midnight.
   except Exception as e:
     print(f"Failed to send email to {to_email}: {e}")
 
+def update_history_csv(target_date_str, occasion, daily_counts):
+  headers = ["Date", "Occasion"] + list(MEMBERS.keys())
+  rows = []
+  date_found = False
+
+  if os.path.exists(HISTORY_CSV):
+    with open(HISTORY_CSV, mode="r", encoding="utf-8") as f:
+      reader = csv.DictReader(f)
+      for r in reader:
+        if r.get("Date") == target_date_str:
+          date_found = True
+          r["Occasion"] = occasion
+          for name in MEMBERS.keys():
+            r[name] = str(daily_counts.get(name, 0))
+        rows.append(r)
+
+  if not date_found:
+    new_row = {"Date": target_date_str, "Occasion": occasion}
+    for name in MEMBERS.keys():
+      new_row[name] = str(daily_counts.get(name, 0))
+    rows.append(new_row)
+
+  with open(HISTORY_CSV, mode="w", newline="", encoding="utf-8") as f:
+    writer = csv.DictWriter(f, fieldnames=headers)
+    writer.writeheader()
+    for r in rows:
+      writer.writerow({h: r.get(h, "0") for h in headers})
+
 # IST Time Management
 ist_tz = ZoneInfo("Asia/Kolkata")
 now_ist = datetime.now(ist_tz)
@@ -153,10 +181,10 @@ else:
   occasion_name = today_entry["occasion"]
   assigned_problems = today_entry["problems"]
 
-# Check if current execution time is around 9:00 PM IST (between 9:00 PM and 9:59 PM)
-is_10pm_ist = (now_ist.hour == 22)
+is_9pm_ist = (now_ist.hour == 21)
 
 member_stats = []
+daily_counts_for_csv = {}
 
 for name, info in MEMBERS.items():
   handle = info["handle"]
@@ -170,8 +198,8 @@ for name, info in MEMBERS.items():
       solved_today_titles.add(sub["title"].strip().lower())
 
   total_solved_today = len(solved_today_titles)
+  daily_counts_for_csv[name] = total_solved_today
 
-  # Check assigned drive problems
   if not is_holiday and assigned_problems:
     assigned_match_count = 0
     for prob in assigned_problems:
@@ -192,10 +220,8 @@ for name, info in MEMBERS.items():
     else:
       status = f"❌ 0/{total_assigned} (Pending)"
 
-    # Trigger 9 PM Email if 0 unique questions solved today and not a holiday
     if is_9pm_ist and total_solved_today == 0:
       send_reminder_email(member_email, name, assigned_problems, occasion_name)
-
   else:
     status = f"🌴 {occasion_name}"
 
@@ -207,6 +233,10 @@ for name, info in MEMBERS.items():
       "today_status": status,
   })
 
+# Record daily snapshot into history CSV
+update_history_csv(today_str, occasion_name, daily_counts_for_csv)
+
+# Leaderboard construction
 member_stats.sort(key=lambda x: x["total_all_time"], reverse=True)
 
 leaderboard_rows = []
