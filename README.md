@@ -1,14 +1,14 @@
 # 🚀 MLSC Tier 2 DSA Tracker
 
-> **Last Updated:** 30 Aug 2026, 09:40 PM IST (Auto-syncs every 2 hours)
+> **Last Updated:** 31 Aug 2026, 12:10 AM IST (Auto-syncs every 2 hours)
 
-### 📅 Assigned Problems for Day 0 (30-08):
-- [Excel Sheet Column Title](https://leetcode.com/problems/excel-sheet-column-title/)
+### 🌴 Rest / Holiday Day (Rest Day)
+No mandatory problems scheduled for today.
 
 ---
 
 ### 🏆 Team Leaderboard
 | Rank | Member | LeetCode Profile | Solved Today | Drive Status | Total All-Time Solved |
 | :---: | :--- | :--- | :---: | :--- | :---: |
-| #1 | **Sanish Dalvi** | [SanishDalvi](https://leetcode.com/SanishDalvi) | 1 | ✅ 1/1 (Complete) | 122 |
-| #2 | **Veer** | [Example](https://leetcode.com/Example) | 0 | ❌ 0/1 (Pending) | 0 |
+| #1 | **Sanish Dalvi** | [SanishDalvi](https://leetcode.com/SanishDalvi) | 0 | 🌴 Rest Day | 122 |
+| #2 | **Veer** | [Example](https://leetcode.com/Example) | 0 | 🌴 Rest Day | 0 |
