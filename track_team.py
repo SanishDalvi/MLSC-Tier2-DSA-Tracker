@@ -1,107 +1,60 @@
+import csv
 from datetime import datetime
 import json
 import urllib.request
-import zoneinfo
+from zoneinfo import ZoneInfo
 
+# Add all team members here
 MEMBERS = {
     "Sanish Dalvi": "SanishDalvi",
     "Veer": "Veer",
 }
 
-# Mapping Tier 2 schedule by date (DD-MM)
-TIER_2_SCHEDULE = {
-    "01-09": ["Two Sum", "Valid Anagram", "Backspace String Compare"],
-    "02-09": ["Contains Duplicate", "Best Time to Buy and Sell Stock", "3Sum"],
-    "03-09": ["Majority Element", "Move Zeroes", "Container With Most Water"],
-    "04-09": ["Single Number", "Intersection of Two Arrays II", "Sort Colors"],
-    "05-09": [
-        "Plus One",
-        "Merge Sorted Array",
-        "Longest Substring Without Repeating Characters",
-    ],
-    "07-09": [
-        "Remove Duplicates from Sorted Array",
-        "Remove Element",
-        "Minimum Size Subarray Sum",
-    ],
-    "08-09": [
-        "Search Insert Position",
-        "Valid Palindrome",
-        "Longest Repeating Character Replacement",
-    ],
-    "09-09": ["Reverse String", "Reverse Integer", "Permutation in String"],
-    "10-09": [
-        "Palindrome Number",
-        "Roman to Integer",
-        "Find All Anagrams in a String",
-    ],
-    "11-09": ["Integer to Roman", "Longest Common Prefix", "3Sum Closest"],
-    "12-09": [
-        "Find the Index of the First Occurrence in a String",
-        "Length of Last Word",
-        "4Sum",
-    ],
-    "15-09": ["Add Binary", "Sqrt(x)", "Subarray Product Less Than K"],
-    "16-09": [
-        "Climbing Stairs",
-        "Pascal's Triangle",
-        "Max Consecutive Ones III",
-    ],
-    "17-09": ["Pascal's Triangle II", "Missing Number", "Fruit Into Baskets"],
-    "18-09": [
-        "Find All Numbers Disappeared in an Array",
-        "Third Maximum Number",
-        "Boats to Save People",
-    ],
-    "19-09": [
-        "Assign Cookies",
-        "Two Sum II - Input Array Is Sorted",
-        "Sort an Array",
-    ],
-    "21-09": [
-        "Squares of a Sorted Array",
-        "Fibonacci Number",
-        "Kth Largest Element in an Array",
-    ],
-    "22-09": [
-        "Ransom Note",
-        "First Unique Character in a String",
-        "Sliding Window Maximum",
-    ],
-    "23-09": [
-        "Isomorphic Strings",
-        "Word Pattern",
-        "Minimum Window Substring",
-    ],
-    "24-09": ["Happy Number", "Excel Sheet Column Title", "Rotate Array"],
-    "25-09": [
-        "Excel Sheet Column Number",
-        "Power of Two",
-        "Product of Array Except Self",
-    ],
-    "26-09": ["Power of Three", "Power of Four", "Trapping Rain Water"],
-    "28-09": ["Ugly Number", "Count Primes", "Backspace String Compare"],
-    "29-09": ["Add Digits", "Number of 1 Bits", "3Sum"],
-    "30-09": [
-        "Reverse Bits",
-        "Hamming Distance",
-        "Container With Most Water",
-    ],
-    # Remaining October, November, and December dates can be added following the same format
-}
-
+CSV_FILE = "schedule.csv"
 GRAPHQL_URL = "https://leetcode.com/graphql"
-QUERY = """
-query getRecentSubmissions($username: String!) {
-  recentAcSubmissionList(username: $username, limit: 15) {
+
+USER_DATA_QUERY = """
+query getUserData($username: String!) {
+  matchedUser(username: $username) {
+    submitStats {
+      acSubmissionNum {
+        difficulty
+        count
+      }
+    }
+  }
+  recentAcSubmissionList(username: $username, limit: 25) {
     title
   }
 }
 """
 
 
-def get_recent_accepted_titles(username):
-  payload = json.dumps({"query": QUERY, "variables": {"username": username}})
+def load_schedule_from_csv(filename):
+  schedule = {}
+  with open(filename, mode="r", encoding="utf-8") as f:
+    reader = csv.DictReader(f)
+    for row in reader:
+      date_key = row["Date"].strip()
+      occasion = row["Occasion"].strip()
+      problems_raw = row["Problems"].strip()
+
+      if problems_raw.upper() == "HOLIDAY":
+        schedule[date_key] = {"type": "holiday", "occasion": occasion}
+      else:
+        problems = [p.strip() for p in problems_raw.split(";") if p.strip()]
+        schedule[date_key] = {
+            "type": "practice",
+            "occasion": occasion,
+            "problems": problems,
+        }
+  return schedule
+
+
+def fetch_leetcode_data(username):
+  payload = json.dumps(
+      {"query": USER_DATA_QUERY, "variables": {"username": username}}
+  )
   req = urllib.request.Request(
       GRAPHQL_URL,
       data=payload.encode("utf-8"),
@@ -114,36 +67,56 @@ def get_recent_accepted_titles(username):
   try:
     with urllib.request.urlopen(req, timeout=10) as response:
       data = json.loads(response.read().decode())
+      matched = data.get("data", {}).get("matchedUser")
+      total_solved = 0
+      if matched and "submitStats" in matched:
+        for item in matched["submitStats"]["acSubmissionNum"]:
+          if item["difficulty"] == "All":
+            total_solved = item["count"]
+
       submissions = data.get("data", {}).get("recentAcSubmissionList", [])
-      return [sub["title"].strip().lower() for sub in submissions]
+      recent_titles = [
+          sub["title"].strip().lower() for sub in submissions if "title" in sub
+      ]
+      return total_solved, recent_titles
   except Exception:
-    return []
+    return 0, []
 
 
-# Get today's date in Indian Standard Time (IST)
-ist_time = datetime.now(zoneinfo.ZoneInfo("Asia/Kolkata"))
+# Load current date in IST
+ist_time = datetime.now(ZoneInfo("Asia/Kolkata"))
 today_str = ist_time.strftime("%d-%m")
-today_display = ist_time.strftime("%d %b %Y")
+today_display = ist_time.strftime("%d %b %Y, %I:%M %p IST")
 
-assigned_problems = TIER_2_SCHEDULE.get(today_str, None)
+schedule = load_schedule_from_csv(CSV_FILE)
+today_entry = schedule.get(today_str, None)
 
-table_rows = []
+is_holiday = False
+occasion_name = ""
+assigned_problems = []
 
-if assigned_problems is None:
-  status_header = f"### 🌴 {today_display} is a Rest / Holiday Day! No assigned problems today.\n"
+if today_entry is None or today_entry["type"] == "holiday":
+  is_holiday = True
+  occasion_name = today_entry["occasion"] if today_entry else "Rest Day"
 else:
-  status_header = f"### 📅 Assigned Problems for Today ({today_display}):\n"
-  for p in assigned_problems:
-    status_header += f"- **{p}**\n"
+  occasion_name = today_entry["occasion"]
+  assigned_problems = today_entry["problems"]
 
-  for name, handle in MEMBERS.items():
-    recent_solved = get_recent_accepted_titles(handle)
-    solved_count = 0
+# Process members
+member_stats = []
+for name, handle in MEMBERS.items():
+  total_solved, recent_titles = fetch_leetcode_data(handle)
+  solved_count = 0
 
+  if not is_holiday and assigned_problems:
     for prob in assigned_problems:
-      # Normalise title check (handles minor formatting differences)
-      clean_prob = prob.replace(" (revisit)", "").replace(" (Hard)", "").strip().lower()
-      if clean_prob in recent_solved:
+      clean_prob = (
+          prob.replace(" (revisit)", "")
+          .replace(" (Hard)", "")
+          .strip()
+          .lower()
+      )
+      if clean_prob in recent_titles:
         solved_count += 1
 
     total_assigned = len(assigned_problems)
@@ -153,18 +126,51 @@ else:
       status = f"⚠️ {solved_count}/{total_assigned} (Partial)"
     else:
       status = f"❌ 0/{total_assigned} (Pending)"
+  else:
+    status = f"🌴 {occasion_name}"
 
-    profile_link = f"[{handle}](https://leetcode.com/{handle})"
-    table_rows.append(f"| **{name}** | {profile_link} | {status} |")
+  member_stats.append({
+      "name": name,
+      "handle": handle,
+      "total_solved": total_solved,
+      "today_status": status,
+  })
+
+# Sort leaderboard by total problems solved (descending)
+member_stats.sort(key=lambda x: x["total_solved"], reverse=True)
+
+# Build Markdown rows
+leaderboard_rows = []
+for rank, member in enumerate(member_stats, 1):
+  profile_link = f"[{member['handle']}](https://leetcode.com/{member['handle']})"
+  leaderboard_rows.append(
+      f"| #{rank} | **{member['name']}** | {profile_link} | {member['total_solved']} | {member['today_status']} |"
+  )
+
+# Header generation
+if is_holiday:
+  schedule_header = (
+      f"### 🌴 Rest / Holiday Day ({occasion_name})\nNo mandatory problems"
+      " scheduled for today."
+  )
+else:
+  schedule_header = (
+      f"### 📅 Assigned Problems for {occasion_name} ({today_str}):\n"
+      + "\n".join([f"- **{p}**" for p in assigned_problems])
+  )
 
 readme_content = f"""# 🚀 MLSC Tier 2 DSA Tracker
 
-{status_header}
+> **Last Updated:** {today_display} (Auto-syncs every 2 hours)
 
-### 📊 Daily Progress Table
-| Member | LeetCode Profile | Today's Status |
-| :--- | :--- | :--- |
-""" + "\n".join(table_rows)
+{schedule_header}
 
-with open("README.md", "w") as f:
+---
+
+### 🏆 Team Leaderboard
+| Rank | Member | LeetCode Profile | Total Solved | Today's Status |
+| :---: | :--- | :--- | :---: | :--- |
+""" + "\n".join(leaderboard_rows)
+
+with open("README.md", "w", encoding="utf-8") as f:
   f.write(readme_content)
