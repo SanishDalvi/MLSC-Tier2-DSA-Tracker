@@ -15,7 +15,7 @@ MEMBERS = {
     },
     "Veer": {
         "handle": "Example",
-        "email": "veer@example.com"
+        "email": "sanish.dalvi25@pccoepune.org"
     },
 }
 
