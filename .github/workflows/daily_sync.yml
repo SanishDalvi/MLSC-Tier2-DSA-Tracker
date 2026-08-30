@@ -2,9 +2,9 @@ name: Update Team DSA Leaderboard
 
 on:
   schedule:
-    # Runs daily at 11:30 PM IST (18:00 UTC)
-    - cron: '0 18 * * *'
-  workflow_dispatch: # Allows manual trigger anytime
+    # Runs at the top of every 2nd hour (00:00, 02:00, 04:00, etc. UTC)
+    - cron: '0 */2 * * *'
+  workflow_dispatch: # Allows manual trigger anytime from GitHub Actions tab
 
 jobs:
   update-readme:
@@ -26,5 +26,5 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add README.md
-          git commit -m "Auto-update team stats [skip ci]" || exit 0
+          git commit -m "Auto-update leaderboard [skip ci]" || exit 0
           git push
