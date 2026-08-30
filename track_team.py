@@ -3,6 +3,7 @@ from datetime import datetime, time
 import json
 import urllib.request
 from zoneinfo import ZoneInfo
+import re
 
 MEMBERS = {
     "Sanish": "SanishDalvi",
@@ -28,6 +29,23 @@ query getUserData($username: String!) {
   }
 }
 """
+
+def generate_leetcode_link(problem_name):
+  # Clean tags like (revisit) or (Hard)
+  clean_title = (
+      problem_name.replace("(revisit)", "")
+      .replace("(Hard)", "")
+      .strip()
+      .lower()
+  )
+
+  # Remove special characters except alphanumeric, spaces, and hyphens
+  clean_title = re.sub(r"[^\w\s-]", "", clean_title)
+
+  # Replace spaces and multiple hyphens with a single hyphen
+  slug = re.sub(r"[-\s]+", "-", clean_title).strip("-")
+
+  return f"[{problem_name}](https://leetcode.com/problems/{slug}/)"
 
 
 def load_schedule_from_csv(filename):
@@ -160,15 +178,17 @@ for rank, member in enumerate(member_stats, 1):
   )
 
 # Header generation
+# Header generation with clickable LeetCode links
 if is_holiday:
   schedule_header = (
       f"### 🌴 Rest / Holiday Day ({occasion_name})\nNo mandatory problems"
       " scheduled for today."
   )
 else:
+  formatted_links = [f"- {generate_leetcode_link(p)}" for p in assigned_problems]
   schedule_header = (
       f"### 📅 Assigned Problems for {occasion_name} ({today_str}):\n"
-      + "\n".join([f"- **{p}**" for p in assigned_problems])
+      + "\n".join(formatted_links)
   )
 
 readme_content = f"""# 🚀 MLSC Tier 2 DSA Tracker
