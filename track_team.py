@@ -1,10 +1,9 @@
 import csv
-from datetime import datetime
+from datetime import datetime, time
 import json
 import urllib.request
 from zoneinfo import ZoneInfo
 
-# Add all team members here
 MEMBERS = {
     "Sanish Dalvi": "SanishDalvi",
     "Veer": "Veer",
@@ -23,8 +22,9 @@ query getUserData($username: String!) {
       }
     }
   }
-  recentAcSubmissionList(username: $username, limit: 25) {
+  recentAcSubmissionList(username: $username, limit: 30) {
     title
+    timestamp
   }
 }
 """
@@ -68,25 +68,26 @@ def fetch_leetcode_data(username):
     with urllib.request.urlopen(req, timeout=10) as response:
       data = json.loads(response.read().decode())
       matched = data.get("data", {}).get("matchedUser")
-      total_solved = 0
+      total_all_time = 0
       if matched and "submitStats" in matched:
         for item in matched["submitStats"]["acSubmissionNum"]:
           if item["difficulty"] == "All":
-            total_solved = item["count"]
+            total_all_time = item["count"]
 
       submissions = data.get("data", {}).get("recentAcSubmissionList", [])
-      recent_titles = [
-          sub["title"].strip().lower() for sub in submissions if "title" in sub
-      ]
-      return total_solved, recent_titles
+      return total_all_time, submissions
   except Exception:
     return 0, []
 
 
-# Load current date in IST
-ist_time = datetime.now(ZoneInfo("Asia/Kolkata"))
-today_str = ist_time.strftime("%d-%m")
-today_display = ist_time.strftime("%d %b %Y, %I:%M %p IST")
+# Current IST Time & Today's Midnight Epoch Timestamp
+ist_tz = ZoneInfo("Asia/Kolkata")
+now_ist = datetime.now(ist_tz)
+midnight_ist = datetime.combine(now_ist.date(), time.min, tzinfo=ist_tz)
+midnight_epoch = int(midnight_ist.timestamp())
+
+today_str = now_ist.strftime("%d-%m")
+today_display = now_ist.strftime("%d %b %Y, %I:%M %p IST")
 
 schedule = load_schedule_from_csv(CSV_FILE)
 today_entry = schedule.get(today_str, None)
@@ -102,13 +103,23 @@ else:
   occasion_name = today_entry["occasion"]
   assigned_problems = today_entry["problems"]
 
-# Process members
 member_stats = []
-for name, handle in MEMBERS.items():
-  total_solved, recent_titles = fetch_leetcode_data(handle)
-  solved_count = 0
 
+for name, handle in MEMBERS.items():
+  total_all_time, submissions = fetch_leetcode_data(handle)
+
+  # Filter unique problems solved since 12:00 AM IST today
+  solved_today_titles = set()
+  for sub in submissions:
+    sub_time = int(sub.get("timestamp", 0))
+    if sub_time >= midnight_epoch and "title" in sub:
+      solved_today_titles.add(sub["title"].strip().lower())
+
+  total_solved_today = len(solved_today_titles)
+
+  # Check assigned drive problems
   if not is_holiday and assigned_problems:
+    assigned_match_count = 0
     for prob in assigned_problems:
       clean_prob = (
           prob.replace(" (revisit)", "")
@@ -116,14 +127,14 @@ for name, handle in MEMBERS.items():
           .strip()
           .lower()
       )
-      if clean_prob in recent_titles:
-        solved_count += 1
+      if clean_prob in solved_today_titles:
+        assigned_match_count += 1
 
     total_assigned = len(assigned_problems)
-    if solved_count == total_assigned:
-      status = f"✅ {solved_count}/{total_assigned} (Complete)"
-    elif solved_count > 0:
-      status = f"⚠️ {solved_count}/{total_assigned} (Partial)"
+    if assigned_match_count == total_assigned:
+      status = f"✅ {assigned_match_count}/{total_assigned} (Complete)"
+    elif assigned_match_count > 0:
+      status = f"⚠️ {assigned_match_count}/{total_assigned} (Partial)"
     else:
       status = f"❌ 0/{total_assigned} (Pending)"
   else:
@@ -132,19 +143,20 @@ for name, handle in MEMBERS.items():
   member_stats.append({
       "name": name,
       "handle": handle,
-      "total_solved": total_solved,
+      "total_all_time": total_all_time,
+      "total_today": total_solved_today,
       "today_status": status,
   })
 
-# Sort leaderboard by total problems solved (descending)
-member_stats.sort(key=lambda x: x["total_solved"], reverse=True)
+# Sort leaderboard by all-time solved count (descending)
+member_stats.sort(key=lambda x: x["total_all_time"], reverse=True)
 
-# Build Markdown rows
+# Generate Markdown table rows
 leaderboard_rows = []
 for rank, member in enumerate(member_stats, 1):
   profile_link = f"[{member['handle']}](https://leetcode.com/{member['handle']})"
   leaderboard_rows.append(
-      f"| #{rank} | **{member['name']}** | {profile_link} | {member['total_solved']} | {member['today_status']} |"
+      f"| #{rank} | **{member['name']}** | {profile_link} | {member['total_today']} | {member['today_status']} | {member['total_all_time']} |"
   )
 
 # Header generation
@@ -168,8 +180,8 @@ readme_content = f"""# 🚀 MLSC Tier 2 DSA Tracker
 ---
 
 ### 🏆 Team Leaderboard
-| Rank | Member | LeetCode Profile | Total Solved | Today's Status |
-| :---: | :--- | :--- | :---: | :--- |
+| Rank | Member | LeetCode Profile | Solved Today | Drive Status | Total All-Time Solved |
+| :---: | :--- | :--- | :---: | :--- | :---: |
 """ + "\n".join(leaderboard_rows)
 
 with open("README.md", "w", encoding="utf-8") as f:
