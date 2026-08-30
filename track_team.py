@@ -154,7 +154,7 @@ else:
   assigned_problems = today_entry["problems"]
 
 # Check if current execution time is around 9:00 PM IST (between 9:00 PM and 9:59 PM)
-is_9pm_ist = (now_ist.hour == 21)
+is_10pm_ist = (now_ist.hour == 22)
 
 member_stats = []
 
