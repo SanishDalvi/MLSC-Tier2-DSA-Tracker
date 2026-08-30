@@ -1,13 +1,23 @@
 import csv
 from datetime import datetime, time
+import email.message
 import json
+import os
+import re
+import smtplib
 import urllib.request
 from zoneinfo import ZoneInfo
-import re
 
+# Add member name, LeetCode handle, and their email address
 MEMBERS = {
-    "Sanish": "SanishDalvi",
-    "Amruta": "amruta_thakare",
+    "Sanish Dalvi": {
+        "handle": "SanishDalvi",
+        "email": "sanish@example.com"
+    },
+    "Veer": {
+        "handle": "Veer",
+        "email": "veer@example.com"
+    },
 }
 
 CSV_FILE = "schedule.csv"
@@ -31,22 +41,15 @@ query getUserData($username: String!) {
 """
 
 def generate_leetcode_link(problem_name):
-  # Clean tags like (revisit) or (Hard)
   clean_title = (
       problem_name.replace("(revisit)", "")
       .replace("(Hard)", "")
       .strip()
       .lower()
   )
-
-  # Remove special characters except alphanumeric, spaces, and hyphens
   clean_title = re.sub(r"[^\w\s-]", "", clean_title)
-
-  # Replace spaces and multiple hyphens with a single hyphen
   slug = re.sub(r"[-\s]+", "-", clean_title).strip("-")
-
   return f"[{problem_name}](https://leetcode.com/problems/{slug}/)"
-
 
 def load_schedule_from_csv(filename):
   schedule = {}
@@ -68,11 +71,8 @@ def load_schedule_from_csv(filename):
         }
   return schedule
 
-
 def fetch_leetcode_data(username):
-  payload = json.dumps(
-      {"query": USER_DATA_QUERY, "variables": {"username": username}}
-  )
+  payload = json.dumps({"query": USER_DATA_QUERY, "variables": {"username": username}})
   req = urllib.request.Request(
       GRAPHQL_URL,
       data=payload.encode("utf-8"),
@@ -97,8 +97,40 @@ def fetch_leetcode_data(username):
   except Exception:
     return 0, []
 
+def send_reminder_email(to_email, member_name, assigned_problems, occasion_name):
+  sender_email = os.environ.get("SENDER_EMAIL")
+  sender_password = os.environ.get("SENDER_PASSWORD")
 
-# Current IST Time & Today's Midnight Epoch Timestamp
+  if not sender_email or not sender_password or not to_email:
+    return
+
+  msg = email.message.EmailMessage()
+  msg["Subject"] = f"🚨 DSA Drive Reminder: 0 Problems Solved Today ({occasion_name})"
+  msg["From"] = sender_email
+  msg["To"] = to_email
+
+  problems_list = "\n".join([f"• {p}" for p in assigned_problems])
+  msg.set_content(f"""Hi {member_name},
+
+Our DSA drive tracker noticed that you haven't solved any problems yet today on LeetCode for {occasion_name}.
+
+Today's Assigned Problems:
+{problems_list}
+
+Remember: Consistency is key! Aim to finish before midnight.
+
+- MLSC DSA Drive Bot
+""")
+
+  try:
+    with smtplib.SMTP_SSL("smtp.gmail.com", 465) as server:
+      server.login(sender_email, sender_password)
+      server.send_message(msg)
+      print(f"Sent reminder email to {member_name} ({to_email})")
+  except Exception as e:
+    print(f"Failed to send email to {to_email}: {e}")
+
+# IST Time Management
 ist_tz = ZoneInfo("Asia/Kolkata")
 now_ist = datetime.now(ist_tz)
 midnight_ist = datetime.combine(now_ist.date(), time.min, tzinfo=ist_tz)
@@ -121,12 +153,16 @@ else:
   occasion_name = today_entry["occasion"]
   assigned_problems = today_entry["problems"]
 
+# Check if current execution time is around 9:00 PM IST (between 9:00 PM and 9:59 PM)
+is_9pm_ist = (now_ist.hour == 21)
+
 member_stats = []
 
-for name, handle in MEMBERS.items():
+for name, info in MEMBERS.items():
+  handle = info["handle"]
+  member_email = info.get("email", "")
   total_all_time, submissions = fetch_leetcode_data(handle)
 
-  # Filter unique problems solved since 12:00 AM IST today
   solved_today_titles = set()
   for sub in submissions:
     sub_time = int(sub.get("timestamp", 0))
@@ -155,6 +191,11 @@ for name, handle in MEMBERS.items():
       status = f"⚠️ {assigned_match_count}/{total_assigned} (Partial)"
     else:
       status = f"❌ 0/{total_assigned} (Pending)"
+
+    # Trigger 9 PM Email if 0 unique questions solved today and not a holiday
+    if is_9pm_ist and total_solved_today == 0:
+      send_reminder_email(member_email, name, assigned_problems, occasion_name)
+
   else:
     status = f"🌴 {occasion_name}"
 
@@ -166,10 +207,8 @@ for name, handle in MEMBERS.items():
       "today_status": status,
   })
 
-# Sort leaderboard by all-time solved count (descending)
 member_stats.sort(key=lambda x: x["total_all_time"], reverse=True)
 
-# Generate Markdown table rows
 leaderboard_rows = []
 for rank, member in enumerate(member_stats, 1):
   profile_link = f"[{member['handle']}](https://leetcode.com/{member['handle']})"
@@ -177,8 +216,6 @@ for rank, member in enumerate(member_stats, 1):
       f"| #{rank} | **{member['name']}** | {profile_link} | {member['total_today']} | {member['today_status']} | {member['total_all_time']} |"
   )
 
-# Header generation
-# Header generation with clickable LeetCode links
 if is_holiday:
   schedule_header = (
       f"### 🌴 Rest / Holiday Day ({occasion_name})\nNo mandatory problems"
