@@ -5,8 +5,8 @@ import urllib.request
 from zoneinfo import ZoneInfo
 
 MEMBERS = {
-    "Sanish Dalvi": "SanishDalvi",
-    "Veer": "Veer",
+    "Sanish": "SanishDalvi",
+    "Amruta": "amruta_thakare",
 }
 
 CSV_FILE = "schedule.csv"
