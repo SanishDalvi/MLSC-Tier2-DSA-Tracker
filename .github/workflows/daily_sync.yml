@@ -2,9 +2,10 @@ name: Update Team DSA Leaderboard
 
 on:
   schedule:
-    # Runs at the top of every 2nd hour (00:00, 02:00, 04:00, etc. UTC)
+    # Runs every 2 hours UTC + exactly at 9:00 PM IST (15:30 UTC)
     - cron: '0 */2 * * *'
-  workflow_dispatch: # Allows manual trigger anytime from GitHub Actions tab
+    - cron: '30 15 * * *'
+  workflow_dispatch:
 
 jobs:
   update-readme:
@@ -18,7 +19,10 @@ jobs:
         with:
           python-version: '3.10'
 
-      - name: Run Tracker Script
+      - name: Run Tracker Script & Email Reminder
+        env:
+          SENDER_EMAIL: ${{ secrets.SENDER_EMAIL }}
+          SENDER_PASSWORD: ${{ secrets.SENDER_PASSWORD }}
         run: python track_team.py
 
       - name: Commit and Push Changes
