@@ -1,5 +1,5 @@
 import csv
-from datetime import datetime, time, timedelta
+from datetime import datetime, time
 import email.message
 import json
 import os
@@ -8,18 +8,8 @@ import smtplib
 import urllib.request
 from zoneinfo import ZoneInfo
 
-MEMBERS = {
-    "Sanish Dalvi": {
-        "handle": "SanishDalvi",
-        "email": "sanish.dalvi25@pccoepune.org"
-    },
-    "Veer": {
-        "handle": "Example",
-        "email": "sanish.dalvi25@pccoepune.org"
-    },
-}
-
-CSV_FILE = "schedule.csv"
+MEMBERS_CSV = "members.csv"
+SCHEDULE_CSV = "schedule.csv"
 HISTORY_CSV = "daily_history.csv"
 GRAPHQL_URL = "https://leetcode.com/graphql"
 
@@ -40,6 +30,24 @@ query getUserData($username: String!) {
 }
 """
 
+
+def load_members_from_csv(filename):
+  members = {}
+  if not os.path.exists(filename):
+    print(f"Error: {filename} not found.")
+    return members
+
+  with open(filename, mode="r", encoding="utf-8") as f:
+    reader = csv.DictReader(f)
+    for row in reader:
+      name = row.get("Name", "").strip()
+      handle = row.get("Handle", "").strip()
+      email_addr = row.get("Email", "").strip()
+      if name and handle:
+        members[name] = {"handle": handle, "email": email_addr}
+  return members
+
+
 def generate_leetcode_link(problem_name):
   clean_title = (
       problem_name.replace("(revisit)", "")
@@ -51,8 +59,12 @@ def generate_leetcode_link(problem_name):
   slug = re.sub(r"[-\s]+", "-", clean_title).strip("-")
   return f"[{problem_name}](https://leetcode.com/problems/{slug}/)"
 
+
 def load_schedule_from_csv(filename):
   schedule = {}
+  if not os.path.exists(filename):
+    return schedule
+
   with open(filename, mode="r", encoding="utf-8") as f:
     reader = csv.DictReader(f)
     for row in reader:
@@ -71,8 +83,11 @@ def load_schedule_from_csv(filename):
         }
   return schedule
 
+
 def fetch_leetcode_data(username):
-  payload = json.dumps({"query": USER_DATA_QUERY, "variables": {"username": username}})
+  payload = json.dumps(
+      {"query": USER_DATA_QUERY, "variables": {"username": username}}
+  )
   req = urllib.request.Request(
       GRAPHQL_URL,
       data=payload.encode("utf-8"),
@@ -97,7 +112,10 @@ def fetch_leetcode_data(username):
   except Exception:
     return 0, []
 
-def send_reminder_email(to_email, member_name, assigned_problems, occasion_name):
+
+def send_reminder_email(
+    to_email, member_name, assigned_problems, occasion_name
+):
   sender_email = os.environ.get("SENDER_EMAIL")
   sender_password = os.environ.get("SENDER_PASSWORD")
 
@@ -105,7 +123,9 @@ def send_reminder_email(to_email, member_name, assigned_problems, occasion_name)
     return
 
   msg = email.message.EmailMessage()
-  msg["Subject"] = f"🚨 DSA Drive Reminder: 0 Problems Solved Today ({occasion_name})"
+  msg["Subject"] = (
+      f"🚨 DSA Drive Reminder: 0 Problems Solved Today ({occasion_name})"
+  )
   msg["From"] = sender_email
   msg["To"] = to_email
 
@@ -130,8 +150,9 @@ Remember: Consistency is key! Aim to finish before midnight.
   except Exception as e:
     print(f"Failed to send email to {to_email}: {e}")
 
-def update_history_csv(target_date_str, occasion, daily_counts):
-  headers = ["Date", "Occasion"] + list(MEMBERS.keys())
+
+def update_history_csv(target_date_str, occasion, daily_counts, members_list):
+  headers = ["Date", "Occasion"] + members_list
   rows = []
   date_found = False
 
@@ -142,13 +163,13 @@ def update_history_csv(target_date_str, occasion, daily_counts):
         if r.get("Date") == target_date_str:
           date_found = True
           r["Occasion"] = occasion
-          for name in MEMBERS.keys():
+          for name in members_list:
             r[name] = str(daily_counts.get(name, 0))
         rows.append(r)
 
   if not date_found:
     new_row = {"Date": target_date_str, "Occasion": occasion}
-    for name in MEMBERS.keys():
+    for name in members_list:
       new_row[name] = str(daily_counts.get(name, 0))
     rows.append(new_row)
 
@@ -158,7 +179,12 @@ def update_history_csv(target_date_str, occasion, daily_counts):
     for r in rows:
       writer.writerow({h: r.get(h, "0") for h in headers})
 
-# IST Time Management
+
+# Load Members & Schedule from CSV files
+members = load_members_from_csv(MEMBERS_CSV)
+schedule = load_schedule_from_csv(SCHEDULE_CSV)
+
+# IST Time Setup
 ist_tz = ZoneInfo("Asia/Kolkata")
 now_ist = datetime.now(ist_tz)
 midnight_ist = datetime.combine(now_ist.date(), time.min, tzinfo=ist_tz)
@@ -167,9 +193,7 @@ midnight_epoch = int(midnight_ist.timestamp())
 today_str = now_ist.strftime("%d-%m")
 today_display = now_ist.strftime("%d %b %Y, %I:%M %p IST")
 
-schedule = load_schedule_from_csv(CSV_FILE)
 today_entry = schedule.get(today_str, None)
-
 is_holiday = False
 occasion_name = ""
 assigned_problems = []
@@ -181,12 +205,12 @@ else:
   occasion_name = today_entry["occasion"]
   assigned_problems = today_entry["problems"]
 
-is_9pm_ist = (now_ist.hour == 21)
+is_9pm_ist = now_ist.hour == 21
 
 member_stats = []
 daily_counts_for_csv = {}
 
-for name, info in MEMBERS.items():
+for name, info in members.items():
   handle = info["handle"]
   member_email = info.get("email", "")
   total_all_time, submissions = fetch_leetcode_data(handle)
@@ -234,16 +258,22 @@ for name, info in MEMBERS.items():
   })
 
 # Record daily snapshot into history CSV
-update_history_csv(today_str, occasion_name, daily_counts_for_csv)
+update_history_csv(
+    today_str, occasion_name, daily_counts_for_csv, list(members.keys())
+)
 
 # Leaderboard construction
 member_stats.sort(key=lambda x: x["total_all_time"], reverse=True)
 
 leaderboard_rows = []
 for rank, member in enumerate(member_stats, 1):
-  profile_link = f"[{member['handle']}](https://leetcode.com/{member['handle']})"
+  profile_link = (
+      f"[{member['handle']}](https://leetcode.com/{member['handle']})"
+  )
   leaderboard_rows.append(
-      f"| #{rank} | **{member['name']}** | {profile_link} | {member['total_today']} | {member['today_status']} | {member['total_all_time']} |"
+      f"| #{rank} | **{member['name']}** | {profile_link} |"
+      f" {member['total_today']} | {member['today_status']} |"
+      f" {member['total_all_time']} |"
   )
 
 if is_holiday:
@@ -252,7 +282,9 @@ if is_holiday:
       " scheduled for today."
   )
 else:
-  formatted_links = [f"- {generate_leetcode_link(p)}" for p in assigned_problems]
+  formatted_links = [
+      f"- {generate_leetcode_link(p)}" for p in assigned_problems
+  ]
   schedule_header = (
       f"### 📅 Assigned Problems for {occasion_name} ({today_str}):\n"
       + "\n".join(formatted_links)
