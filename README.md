@@ -1,6 +1,6 @@
 # 🚀 MLSC Tier 2 DSA Tracker
 
-> **Last Updated:** 01 Sep 2026, 09:39 PM IST (Auto-syncs every 2 hours)
+> **Last Updated:** 01 Sep 2026, 10:58 PM IST (Auto-syncs every 2 hours)
 
 ### 📅 Assigned Problems for Day 1 (01-09):
 - [Two Sum](https://leetcode.com/problems/two-sum/)
@@ -14,6 +14,6 @@
 | :---: | :--- | :--- | :---: | :--- | :---: |
 | #1 | **Sanish Dalvi** | [SanishDalvi](https://leetcode.com/SanishDalvi) | 3 | ✅ 3/3 (Complete) | 123 |
 | #2 | **Veerbhadra Mahant** | [Veerbhadra_Mahant](https://leetcode.com/Veerbhadra_Mahant) | 3 | ✅ 3/3 (Complete) | 81 |
-| #3 | **Tanvi Jadhav** | [tanvi_jadhav7](https://leetcode.com/tanvi_jadhav7) | 1 | ⚠️ 1/3 (Partial) | 19 |
-| #4 | **Nirav Neve** | [NotNirav](https://leetcode.com/NotNirav) | 1 | ⚠️ 1/3 (Partial) | 1 |
+| #3 | **Tanvi Jadhav** | [tanvi_jadhav7](https://leetcode.com/tanvi_jadhav7) | 2 | ⚠️ 2/3 (Partial) | 20 |
+| #4 | **Nirav Neve** | [NotNirav](https://leetcode.com/NotNirav) | 2 | ⚠️ 1/3 (Partial) | 2 |
 | #5 | **Badal Dadwani** | [Badal0711](https://leetcode.com/Badal0711) | 0 | ❌ 0/3 (Pending) | 0 |
