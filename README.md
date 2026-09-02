@@ -1,6 +1,6 @@
 # 🚀 MLSC Tier 2 DSA Tracker
 
-> **Last Updated:** 02 Sep 2026, 05:49 PM IST (Auto-syncs every 2 hours)
+> **Last Updated:** 02 Sep 2026, 07:18 PM IST (Auto-syncs every 2 hours)
 
 ### 📅 Assigned Problems for Day 2 (02-09):
 - [Contains Duplicate](https://leetcode.com/problems/contains-duplicate/)
@@ -12,7 +12,7 @@
 ### 🏆 Team Leaderboard
 | Rank | Member | LeetCode Profile | Solved Today | Drive Status | Total All-Time Solved |
 | :---: | :--- | :--- | :---: | :--- | :---: |
-| #1 | **Sanish Dalvi** | [SanishDalvi](https://leetcode.com/SanishDalvi) | 0 | ❌ 0/3 (Pending) | 123 |
+| #1 | **Sanish Dalvi** | [SanishDalvi](https://leetcode.com/SanishDalvi) | 3 | ✅ 3/3 (Complete) | 123 |
 | #2 | **Veerbhadra Mahant** | [Veerbhadra_Mahant](https://leetcode.com/Veerbhadra_Mahant) | 3 | ✅ 3/3 (Complete) | 81 |
 | #3 | **Tanvi Jadhav** | [tanvi_jadhav7](https://leetcode.com/tanvi_jadhav7) | 0 | ❌ 0/3 (Pending) | 21 |
 | #4 | **Nirav Neve** | [NotNirav](https://leetcode.com/NotNirav) | 0 | ❌ 0/3 (Pending) | 3 |
