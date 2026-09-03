@@ -1,6 +1,6 @@
-# 🚀 MLSC Tier 2 DSA Tracker
+# 🚀 MLSC DSA Tracker
 
-> **Last Updated:** 03 Sep 2026, 12:04 PM IST (Auto-syncs every 2 hours)
+> **Last Updated:** 03 Sep 2026, 06:42 PM IST (Auto-syncs every 45 min)
 
 ### 📅 Assigned Problems for Day 3 (03-09):
 - [Majority Element](https://leetcode.com/problems/majority-element/)
