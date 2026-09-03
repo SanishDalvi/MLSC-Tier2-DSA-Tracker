@@ -1,6 +1,6 @@
 # 🚀 MLSC Tier 2 DSA Tracker
 
-> **Last Updated:** 03 Sep 2026, 07:11 AM IST (Auto-syncs every 2 hours)
+> **Last Updated:** 03 Sep 2026, 12:04 PM IST (Auto-syncs every 2 hours)
 
 ### 📅 Assigned Problems for Day 3 (03-09):
 - [Majority Element](https://leetcode.com/problems/majority-element/)
@@ -13,7 +13,7 @@
 | Rank | Member | LeetCode Profile | Solved Today | Drive Status | Total All-Time Solved |
 | :---: | :--- | :--- | :---: | :--- | :---: |
 | #1 | **Sanish Dalvi** | [SanishDalvi](https://leetcode.com/SanishDalvi) | 0 | ❌ 0/3 (Pending) | 123 |
-| #2 | **Veerbhadra Mahant** | [Veerbhadra_Mahant](https://leetcode.com/Veerbhadra_Mahant) | 0 | ❌ 0/3 (Pending) | 81 |
+| #2 | **Veerbhadra Mahant** | [Veerbhadra_Mahant](https://leetcode.com/Veerbhadra_Mahant) | 1 | ⚠️ 1/3 (Partial) | 81 |
 | #3 | **Tanvi Jadhav** | [tanvi_jadhav7](https://leetcode.com/tanvi_jadhav7) | 0 | ❌ 0/3 (Pending) | 24 |
 | #4 | **Nirav Neve** | [NotNirav](https://leetcode.com/NotNirav) | 0 | ❌ 0/3 (Pending) | 3 |
 | #5 | **Badal Dadwani** | [Badal0711](https://leetcode.com/Badal0711) | 0 | ❌ 0/3 (Pending) | 0 |
