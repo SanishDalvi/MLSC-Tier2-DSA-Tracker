@@ -1,6 +1,6 @@
 # 🚀 MLSC DSA Tracker
 
-> **Last Updated:** 08 Sep 2026, 07:01 PM IST (Auto-syncs every 45 min)
+> **Last Updated:** 08 Sep 2026, 07:31 PM IST (Auto-syncs every 45 min)
 
 ### 📅 Assigned Problems for Day 7 (08-09):
 - [Search Insert Position](https://leetcode.com/problems/search-insert-position/)
@@ -12,7 +12,7 @@
 ### 🏆 Team Leaderboard
 | Rank | Member | LeetCode Profile | Solved Today | Drive Status | Total All-Time Solved |
 | :---: | :--- | :--- | :---: | :--- | :---: |
-| #1 | **Sanish Dalvi** | [SanishDalvi](https://leetcode.com/SanishDalvi) | 2 | ⚠️ 2/3 (Partial) | 130 |
+| #1 | **Sanish Dalvi** | [SanishDalvi](https://leetcode.com/SanishDalvi) | 4 | ⚠️ 2/3 (Partial) | 132 |
 | #2 | **Veerbhadra Mahant** | [Veerbhadra_Mahant](https://leetcode.com/Veerbhadra_Mahant) | 0 | ❌ 0/3 (Pending) | 85 |
 | #3 | **Tanvi Jadhav** | [tanvi_jadhav7](https://leetcode.com/tanvi_jadhav7) | 0 | ❌ 0/3 (Pending) | 31 |
 | #4 | **Nirav Neve** | [NotNirav](https://leetcode.com/NotNirav) | 0 | ❌ 0/3 (Pending) | 6 |
