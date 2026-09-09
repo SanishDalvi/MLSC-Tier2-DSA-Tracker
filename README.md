@@ -1,11 +1,11 @@
 # 🚀 MLSC DSA Tracker
 
-> **Last Updated:** 10 Sep 2026, 01:31 AM IST (Auto-syncs every 45 min)
+> **Last Updated:** 10 Sep 2026, 02:00 AM IST (Auto-syncs every 45 min)
 
-### 📅 Assigned Problems for Day 8 (09-09):
-- [Reverse String](https://leetcode.com/problems/reverse-string/)
-- [Reverse Integer](https://leetcode.com/problems/reverse-integer/)
-- [Permutation in String](https://leetcode.com/problems/permutation-in-string/)
+### 📅 Assigned Problems for Day 9 (10-09):
+- [Palindrome Number](https://leetcode.com/problems/palindrome-number/)
+- [Roman to Integer](https://leetcode.com/problems/roman-to-integer/)
+- [Find All Anagrams in a String](https://leetcode.com/problems/find-all-anagrams-in-a-string/)
 
 ---
 
