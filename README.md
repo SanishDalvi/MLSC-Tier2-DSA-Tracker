@@ -1,6 +1,6 @@
 # 🚀 MLSC DSA Tracker
 
-> **Last Updated:** 10 Sep 2026, 07:00 AM IST (Auto-syncs every 45 min)
+> **Last Updated:** 10 Sep 2026, 07:31 AM IST (Auto-syncs every 45 min)
 
 ### 📅 Assigned Problems for Day 9 (10-09):
 - [Palindrome Number](https://leetcode.com/problems/palindrome-number/)
@@ -12,7 +12,7 @@
 ### 🏆 Team Leaderboard
 | Rank | Member | LeetCode Profile | Solved Today | Drive Status | Total All-Time Solved |
 | :---: | :--- | :--- | :---: | :--- | :---: |
-| #1 | **Sanish Dalvi** | [SanishDalvi](https://leetcode.com/SanishDalvi) | 0 | ❌ 0/3 (Pending) | 132 |
+| #1 | **Sanish Dalvi** | [SanishDalvi](https://leetcode.com/SanishDalvi) | 1 | ❌ 0/3 (Pending) | 133 |
 | #2 | **Veerbhadra Mahant** | [Veerbhadra_Mahant](https://leetcode.com/Veerbhadra_Mahant) | 0 | ❌ 0/3 (Pending) | 85 |
 | #3 | **Tanvi Jadhav** | [tanvi_jadhav7](https://leetcode.com/tanvi_jadhav7) | 0 | ❌ 0/3 (Pending) | 31 |
 | #4 | **Nirav Neve** | [NotNirav](https://leetcode.com/NotNirav) | 0 | ❌ 0/3 (Pending) | 6 |
