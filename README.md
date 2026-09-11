@@ -1,11 +1,11 @@
 # 🚀 MLSC DSA Tracker
 
-> **Last Updated:** 12 Sep 2026, 01:31 AM IST (Auto-syncs every 45 min)
+> **Last Updated:** 12 Sep 2026, 02:00 AM IST (Auto-syncs every 45 min)
 
-### 📅 Assigned Problems for Day 10 (11-09):
-- [Integer to Roman](https://leetcode.com/problems/integer-to-roman/)
-- [Longest Common Prefix](https://leetcode.com/problems/longest-common-prefix/)
-- [3Sum Closest](https://leetcode.com/problems/3sum-closest/)
+### 📅 Assigned Problems for Day 11 (12-09):
+- [Find the Index of the First Occurrence in a String](https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/)
+- [Length of Last Word](https://leetcode.com/problems/length-of-last-word/)
+- [4Sum](https://leetcode.com/problems/4sum/)
 
 ---
 
