@@ -1,6 +1,6 @@
 # 🚀 MLSC DSA Tracker
 
-> **Last Updated:** 15 Sep 2026, 01:23 AM IST (Auto-syncs every 45 min)
+> **Last Updated:** 15 Sep 2026, 01:31 AM IST (Auto-syncs every 45 min)
 
 ### 🌴 Rest / Holiday Day (Ganesh Chaturthi)
 No mandatory problems scheduled for today.
@@ -12,6 +12,6 @@ No mandatory problems scheduled for today.
 | :---: | :--- | :--- | :---: | :--- | :---: |
 | #1 | **Sanish Dalvi** | [SanishDalvi](https://leetcode.com/SanishDalvi) | 0 | 🌴 Ganesh Chaturthi | 133 |
 | #2 | **Veerbhadra Mahant** | [Veerbhadra_Mahant](https://leetcode.com/Veerbhadra_Mahant) | 0 | 🌴 Ganesh Chaturthi | 88 |
-| #3 | **Nirav Neve** | [NotNirav](https://leetcode.com/NotNirav) | 0 | 🌴 Ganesh Chaturthi | 6 |
-| #4 | **Tanvi Jadhav** | [tanvi_jadhav7](https://leetcode.com/tanvi_jadhav7) | 0 | 🌴 Ganesh Chaturthi | 0 |
+| #3 | **Tanvi Jadhav** | [tanvi_jadhav7](https://leetcode.com/tanvi_jadhav7) | 0 | 🌴 Ganesh Chaturthi | 31 |
+| #4 | **Nirav Neve** | [NotNirav](https://leetcode.com/NotNirav) | 0 | 🌴 Ganesh Chaturthi | 6 |
 | #5 | **Badal Dadwani** | [Badal0711](https://leetcode.com/Badal0711) | 0 | 🌴 Ganesh Chaturthi | 0 |
