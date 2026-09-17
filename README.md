@@ -1,11 +1,11 @@
 # 🚀 MLSC DSA Tracker
 
-> **Last Updated:** 18 Sep 2026, 01:31 AM IST (Auto-syncs every 45 min)
+> **Last Updated:** 18 Sep 2026, 02:00 AM IST (Auto-syncs every 45 min)
 
-### 📅 Assigned Problems for Day 14 (17-09):
-- [Pascal's Triangle II](https://leetcode.com/problems/pascals-triangle-ii/)
-- [Missing Number](https://leetcode.com/problems/missing-number/)
-- [Fruit Into Baskets](https://leetcode.com/problems/fruit-into-baskets/)
+### 📅 Assigned Problems for Day 15 (18-09):
+- [Find All Numbers Disappeared in an Array](https://leetcode.com/problems/find-all-numbers-disappeared-in-an-array/)
+- [Third Maximum Number](https://leetcode.com/problems/third-maximum-number/)
+- [Boats to Save People](https://leetcode.com/problems/boats-to-save-people/)
 
 ---
 
