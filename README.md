@@ -1,6 +1,6 @@
 # 🚀 MLSC DSA Tracker
 
-> **Last Updated:** 20 Sep 2026, 03:00 AM IST (Auto-syncs every 45 min)
+> **Last Updated:** 20 Sep 2026, 03:31 AM IST (Auto-syncs every 45 min)
 
 ### 🌴 Rest / Holiday Day (Sunday)
 No mandatory problems scheduled for today.
@@ -11,7 +11,7 @@ No mandatory problems scheduled for today.
 | Rank | Member | LeetCode Profile | Solved Today | Drive Status | Total All-Time Solved |
 | :---: | :--- | :--- | :---: | :--- | :---: |
 | #1 | **Sanish Dalvi** | [SanishDalvi](https://leetcode.com/SanishDalvi) | 0 | 🌴 Sunday | 133 |
-| #2 | **Tanvi Jadhav** | [tanvi_jadhav7](https://leetcode.com/tanvi_jadhav7) | 0 | 🌴 Sunday | 31 |
-| #3 | **Nirav Neve** | [NotNirav](https://leetcode.com/NotNirav) | 0 | 🌴 Sunday | 6 |
-| #4 | **Veerbhadra Mahant** | [Veerbhadra_Mahant](https://leetcode.com/Veerbhadra_Mahant) | 0 | 🌴 Sunday | 0 |
+| #2 | **Veerbhadra Mahant** | [Veerbhadra_Mahant](https://leetcode.com/Veerbhadra_Mahant) | 0 | 🌴 Sunday | 95 |
+| #3 | **Tanvi Jadhav** | [tanvi_jadhav7](https://leetcode.com/tanvi_jadhav7) | 0 | 🌴 Sunday | 31 |
+| #4 | **Nirav Neve** | [NotNirav](https://leetcode.com/NotNirav) | 0 | 🌴 Sunday | 6 |
 | #5 | **Badal Dadwani** | [Badal0711](https://leetcode.com/Badal0711) | 0 | 🌴 Sunday | 0 |
