@@ -1,11 +1,11 @@
 # 🚀 MLSC DSA Tracker
 
-> **Last Updated:** 22 Sep 2026, 01:33 AM IST (Auto-syncs every 45 min)
+> **Last Updated:** 22 Sep 2026, 02:00 AM IST (Auto-syncs every 45 min)
 
-### 📅 Assigned Problems for Day 17 (21-09):
-- [Squares of a Sorted Array](https://leetcode.com/problems/squares-of-a-sorted-array/)
-- [Fibonacci Number](https://leetcode.com/problems/fibonacci-number/)
-- [Kth Largest Element in an Array](https://leetcode.com/problems/kth-largest-element-in-an-array/)
+### 📅 Assigned Problems for Day 18 (22-09):
+- [Ransom Note](https://leetcode.com/problems/ransom-note/)
+- [First Unique Character in a String](https://leetcode.com/problems/first-unique-character-in-a-string/)
+- [Sliding Window Maximum](https://leetcode.com/problems/sliding-window-maximum/)
 
 ---
 
