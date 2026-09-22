@@ -1,11 +1,11 @@
 # 🚀 MLSC DSA Tracker
 
-> **Last Updated:** 23 Sep 2026, 01:31 AM IST (Auto-syncs every 45 min)
+> **Last Updated:** 23 Sep 2026, 02:00 AM IST (Auto-syncs every 45 min)
 
-### 📅 Assigned Problems for Day 18 (22-09):
-- [Ransom Note](https://leetcode.com/problems/ransom-note/)
-- [First Unique Character in a String](https://leetcode.com/problems/first-unique-character-in-a-string/)
-- [Sliding Window Maximum](https://leetcode.com/problems/sliding-window-maximum/)
+### 📅 Assigned Problems for Day 19 (23-09):
+- [Isomorphic Strings](https://leetcode.com/problems/isomorphic-strings/)
+- [Word Pattern](https://leetcode.com/problems/word-pattern/)
+- [Minimum Window Substring](https://leetcode.com/problems/minimum-window-substring/)
 
 ---
 
