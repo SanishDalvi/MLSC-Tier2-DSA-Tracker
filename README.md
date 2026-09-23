@@ -1,11 +1,11 @@
 # 🚀 MLSC DSA Tracker
 
-> **Last Updated:** 24 Sep 2026, 01:31 AM IST (Auto-syncs every 45 min)
+> **Last Updated:** 24 Sep 2026, 02:00 AM IST (Auto-syncs every 45 min)
 
-### 📅 Assigned Problems for Day 19 (23-09):
-- [Isomorphic Strings](https://leetcode.com/problems/isomorphic-strings/)
-- [Word Pattern](https://leetcode.com/problems/word-pattern/)
-- [Minimum Window Substring](https://leetcode.com/problems/minimum-window-substring/)
+### 📅 Assigned Problems for Day 20 (24-09):
+- [Happy Number](https://leetcode.com/problems/happy-number/)
+- [Excel Sheet Column Title](https://leetcode.com/problems/excel-sheet-column-title/)
+- [Rotate Array](https://leetcode.com/problems/rotate-array/)
 
 ---
 
