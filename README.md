@@ -1,11 +1,11 @@
 # 🚀 MLSC DSA Tracker
 
-> **Last Updated:** 25 Sep 2026, 01:31 AM IST (Auto-syncs every 45 min)
+> **Last Updated:** 25 Sep 2026, 02:00 AM IST (Auto-syncs every 45 min)
 
-### 📅 Assigned Problems for Day 20 (24-09):
-- [Happy Number](https://leetcode.com/problems/happy-number/)
-- [Excel Sheet Column Title](https://leetcode.com/problems/excel-sheet-column-title/)
-- [Rotate Array](https://leetcode.com/problems/rotate-array/)
+### 📅 Assigned Problems for Day 21 (25-09):
+- [Excel Sheet Column Number](https://leetcode.com/problems/excel-sheet-column-number/)
+- [Power of Two](https://leetcode.com/problems/power-of-two/)
+- [Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self/)
 
 ---
 
