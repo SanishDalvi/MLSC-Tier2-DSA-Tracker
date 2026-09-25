@@ -1,11 +1,11 @@
 # 🚀 MLSC DSA Tracker
 
-> **Last Updated:** 26 Sep 2026, 01:31 AM IST (Auto-syncs every 45 min)
+> **Last Updated:** 26 Sep 2026, 02:00 AM IST (Auto-syncs every 45 min)
 
-### 📅 Assigned Problems for Day 21 (25-09):
-- [Excel Sheet Column Number](https://leetcode.com/problems/excel-sheet-column-number/)
-- [Power of Two](https://leetcode.com/problems/power-of-two/)
-- [Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self/)
+### 📅 Assigned Problems for Day 22 (26-09):
+- [Power of Three](https://leetcode.com/problems/power-of-three/)
+- [Power of Four](https://leetcode.com/problems/power-of-four/)
+- [Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water/)
 
 ---
 
