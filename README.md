@@ -1,11 +1,11 @@
 # 🚀 MLSC DSA Tracker
 
-> **Last Updated:** 30 Sep 2026, 01:34 AM IST (Auto-syncs every 45 min)
+> **Last Updated:** 30 Sep 2026, 02:00 AM IST (Auto-syncs every 45 min)
 
-### 📅 Assigned Problems for Day 24 (29-09):
-- [Add Digits](https://leetcode.com/problems/add-digits/)
-- [Number of 1 Bits](https://leetcode.com/problems/number-of-1-bits/)
-- [3Sum](https://leetcode.com/problems/3sum/)
+### 📅 Assigned Problems for Day 25 (30-09):
+- [Reverse Bits](https://leetcode.com/problems/reverse-bits/)
+- [Hamming Distance](https://leetcode.com/problems/hamming-distance/)
+- [Container With Most Water](https://leetcode.com/problems/container-with-most-water/)
 
 ---
 
