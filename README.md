@@ -1,18 +1,18 @@
 # 🚀 MLSC DSA Tracker
 
-> **Last Updated:** 03 Oct 2026, 01:40 AM IST (Auto-syncs every 45 min)
+> **Last Updated:** 03 Oct 2026, 02:00 AM IST (Auto-syncs every 45 min)
 
-### 📅 Assigned Problems for Day 27 (02-10):
-- [Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/)
-- [Permutations](https://leetcode.com/problems/permutations/)
-- [Permutations II](https://leetcode.com/problems/permutations-ii/)
+### 📅 Assigned Problems for Day 28 (03-10):
+- [Linked List Cycle](https://leetcode.com/problems/linked-list-cycle/)
+- [Combinations](https://leetcode.com/problems/combinations/)
+- [Combination Sum](https://leetcode.com/problems/combination-sum/)
 
 ---
 
 ### 🏆 Team Leaderboard
 | Rank | Member | LeetCode Profile | Solved Today | Drive Status | Total All-Time Solved |
 | :---: | :--- | :--- | :---: | :--- | :---: |
-| #1 | **Sanish Dalvi** | [SanishDalvi](https://leetcode.com/SanishDalvi) | 1 | ❌ 0/3 (Pending) | 140 |
+| #1 | **Sanish Dalvi** | [SanishDalvi](https://leetcode.com/SanishDalvi) | 0 | ❌ 0/3 (Pending) | 140 |
 | #2 | **Veerbhadra Mahant** | [Veerbhadra_Mahant](https://leetcode.com/Veerbhadra_Mahant) | 0 | ❌ 0/3 (Pending) | 95 |
 | #3 | **Tanvi Jadhav** | [tanvi_jadhav7](https://leetcode.com/tanvi_jadhav7) | 0 | ❌ 0/3 (Pending) | 31 |
 | #4 | **Nirav Neve** | [NotNirav](https://leetcode.com/NotNirav) | 0 | ❌ 0/3 (Pending) | 6 |
