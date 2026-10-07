@@ -1,11 +1,11 @@
 # 🚀 MLSC DSA Tracker
 
-> **Last Updated:** 07 Oct 2026, 10:32 PM IST (Auto-syncs every 45 min)
+> **Last Updated:** 08 Oct 2026, 02:11 AM IST (Auto-syncs every 45 min)
 
-### 📅 Assigned Problems for Day 31 (07-10):
-- [Middle of the Linked List](https://leetcode.com/problems/middle-of-the-linked-list/)
-- [Palindrome Partitioning](https://leetcode.com/problems/palindrome-partitioning/)
-- [Combination Sum III](https://leetcode.com/problems/combination-sum-iii/)
+### 📅 Assigned Problems for Day 32 (08-10):
+- [Valid Parentheses](https://leetcode.com/problems/valid-parentheses/)
+- [Beautiful Arrangement](https://leetcode.com/problems/beautiful-arrangement/)
+- [Binary Search](https://leetcode.com/problems/binary-search/)
 
 ---
 
