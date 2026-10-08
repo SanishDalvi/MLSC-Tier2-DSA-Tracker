@@ -1,11 +1,11 @@
 # 🚀 MLSC DSA Tracker
 
-> **Last Updated:** 08 Oct 2026, 09:00 PM IST (Auto-syncs every 45 min)
+> **Last Updated:** 09 Oct 2026, 02:14 AM IST (Auto-syncs every 45 min)
 
-### 📅 Assigned Problems for Day 32 (08-10):
-- [Valid Parentheses](https://leetcode.com/problems/valid-parentheses/)
-- [Beautiful Arrangement](https://leetcode.com/problems/beautiful-arrangement/)
-- [Binary Search](https://leetcode.com/problems/binary-search/)
+### 📅 Assigned Problems for Day 33 (09-10):
+- [Implement Queue using Stacks](https://leetcode.com/problems/implement-queue-using-stacks/)
+- [First Bad Version](https://leetcode.com/problems/first-bad-version/)
+- [Valid Perfect Square](https://leetcode.com/problems/valid-perfect-square/)
 
 ---
 
