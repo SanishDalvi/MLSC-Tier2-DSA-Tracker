@@ -1,11 +1,11 @@
 # 🚀 MLSC DSA Tracker
 
-> **Last Updated:** 10 Oct 2026, 01:40 AM IST (Auto-syncs every 45 min)
+> **Last Updated:** 10 Oct 2026, 04:40 AM IST (Auto-syncs every 45 min)
 
-### 📅 Assigned Problems for Day 33 (09-10):
-- [Implement Queue using Stacks](https://leetcode.com/problems/implement-queue-using-stacks/)
-- [First Bad Version](https://leetcode.com/problems/first-bad-version/)
-- [Valid Perfect Square](https://leetcode.com/problems/valid-perfect-square/)
+### 📅 Assigned Problems for Day 34 (10-10):
+- [Implement Stack using Queues](https://leetcode.com/problems/implement-stack-using-queues/)
+- [Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/)
+- [Find Minimum in Rotated Sorted Array](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/)
 
 ---
 
