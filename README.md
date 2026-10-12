@@ -1,11 +1,11 @@
 # 🚀 MLSC DSA Tracker
 
-> **Last Updated:** 13 Oct 2026, 12:53 AM IST (Auto-syncs every 45 min)
+> **Last Updated:** 13 Oct 2026, 04:01 AM IST (Auto-syncs every 45 min)
 
-### 📅 Assigned Problems for Day 35 (12-10):
-- [Min Stack](https://leetcode.com/problems/min-stack/)
-- [Search a 2D Matrix](https://leetcode.com/problems/search-a-2d-matrix/)
-- [Search a 2D Matrix II](https://leetcode.com/problems/search-a-2d-matrix-ii/)
+### 📅 Assigned Problems for Day 36 (13-10):
+- [Add Two Numbers](https://leetcode.com/problems/add-two-numbers/)
+- [Find Peak Element](https://leetcode.com/problems/find-peak-element/)
+- [Koko Eating Bananas](https://leetcode.com/problems/koko-eating-bananas/)
 
 ---
 
