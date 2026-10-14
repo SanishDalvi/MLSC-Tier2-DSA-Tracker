@@ -1,11 +1,11 @@
 # 🚀 MLSC DSA Tracker
 
-> **Last Updated:** 15 Oct 2026, 01:14 AM IST (Auto-syncs every 45 min)
+> **Last Updated:** 15 Oct 2026, 04:11 AM IST (Auto-syncs every 45 min)
 
-### 📅 Assigned Problems for Day 37 (14-10):
-- [Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/)
-- [Time Based Key-Value Store](https://leetcode.com/problems/time-based-key-value-store/)
-- [Search in Rotated Sorted Array II](https://leetcode.com/problems/search-in-rotated-sorted-array-ii/)
+### 📅 Assigned Problems for Day 38 (15-10):
+- [Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/)
+- [Find First and Last Position of Element in Sorted Array](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/)
+- [Capacity To Ship Packages Within D Days](https://leetcode.com/problems/capacity-to-ship-packages-within-d-days/)
 
 ---
 
