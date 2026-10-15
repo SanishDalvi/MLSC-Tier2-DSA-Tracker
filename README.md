@@ -1,11 +1,11 @@
 # 🚀 MLSC DSA Tracker
 
-> **Last Updated:** 16 Oct 2026, 12:57 AM IST (Auto-syncs every 45 min)
+> **Last Updated:** 16 Oct 2026, 04:11 AM IST (Auto-syncs every 45 min)
 
-### 📅 Assigned Problems for Day 38 (15-10):
-- [Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/)
-- [Find First and Last Position of Element in Sorted Array](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/)
-- [Capacity To Ship Packages Within D Days](https://leetcode.com/problems/capacity-to-ship-packages-within-d-days/)
+### 📅 Assigned Problems for Day 39 (16-10):
+- [Linked List Cycle](https://leetcode.com/problems/linked-list-cycle/)
+- [Find K Closest Elements](https://leetcode.com/problems/find-k-closest-elements/)
+- [Median of Two Sorted Arrays](https://leetcode.com/problems/median-of-two-sorted-arrays/)
 
 ---
 
