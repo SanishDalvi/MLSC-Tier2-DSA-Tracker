@@ -1,11 +1,11 @@
 # 🚀 MLSC DSA Tracker
 
-> **Last Updated:** 17 Oct 2026, 12:22 AM IST (Auto-syncs every 45 min)
+> **Last Updated:** 17 Oct 2026, 03:15 AM IST (Auto-syncs every 45 min)
 
-### 📅 Assigned Problems for Day 39 (16-10):
-- [Linked List Cycle](https://leetcode.com/problems/linked-list-cycle/)
-- [Find K Closest Elements](https://leetcode.com/problems/find-k-closest-elements/)
-- [Median of Two Sorted Arrays](https://leetcode.com/problems/median-of-two-sorted-arrays/)
+### 📅 Assigned Problems for Day 40 (17-10):
+- [Palindrome Linked List](https://leetcode.com/problems/palindrome-linked-list/)
+- [Maximum Depth of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/)
+- [Same Tree](https://leetcode.com/problems/same-tree/)
 
 ---
 
