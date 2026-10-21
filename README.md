@@ -1,11 +1,11 @@
 # 🚀 MLSC DSA Tracker
 
-> **Last Updated:** 22 Oct 2026, 01:52 AM IST (Auto-syncs every 45 min)
+> **Last Updated:** 22 Oct 2026, 04:55 AM IST (Auto-syncs every 45 min)
 
-### 📅 Assigned Problems for Day 42 (21-10):
-- [Middle of the Linked List](https://leetcode.com/problems/middle-of-the-linked-list/)
-- [Path Sum](https://leetcode.com/problems/path-sum/)
-- [Balanced Binary Tree](https://leetcode.com/problems/balanced-binary-tree/)
+### 📅 Assigned Problems for Day 43 (22-10):
+- [Valid Parentheses](https://leetcode.com/problems/valid-parentheses/)
+- [Minimum Depth of Binary Tree](https://leetcode.com/problems/minimum-depth-of-binary-tree/)
+- [Binary Tree Preorder Traversal](https://leetcode.com/problems/binary-tree-preorder-traversal/)
 
 ---
 
