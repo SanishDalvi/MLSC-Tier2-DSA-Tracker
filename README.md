@@ -1,11 +1,11 @@
 # 🚀 MLSC DSA Tracker
 
-> **Last Updated:** 24 Oct 2026, 01:03 AM IST (Auto-syncs every 45 min)
+> **Last Updated:** 24 Oct 2026, 04:09 AM IST (Auto-syncs every 45 min)
 
-### 📅 Assigned Problems for Day 44 (23-10):
-- [Implement Queue using Stacks](https://leetcode.com/problems/implement-queue-using-stacks/)
-- [Binary Tree Inorder Traversal](https://leetcode.com/problems/binary-tree-inorder-traversal/)
-- [Binary Tree Postorder Traversal](https://leetcode.com/problems/binary-tree-postorder-traversal/)
+### 📅 Assigned Problems for Day 45 (24-10):
+- [Implement Stack using Queues](https://leetcode.com/problems/implement-stack-using-queues/)
+- [Convert Sorted Array to Binary Search Tree](https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/)
+- [Range Sum of BST](https://leetcode.com/problems/range-sum-of-bst/)
 
 ---
 
