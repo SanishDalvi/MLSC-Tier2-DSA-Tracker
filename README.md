@@ -1,11 +1,11 @@
 # 🚀 MLSC DSA Tracker
 
-> **Last Updated:** 26 Oct 2026, 11:09 PM IST (Auto-syncs every 45 min)
+> **Last Updated:** 27 Oct 2026, 02:08 AM IST (Auto-syncs every 45 min)
 
-### 📅 Assigned Problems for Day 46 (26-10):
-- [Min Stack](https://leetcode.com/problems/min-stack/)
-- [Two Sum IV - Input is a BST](https://leetcode.com/problems/two-sum-iv-input-is-a-bst/)
-- [Diameter of Binary Tree](https://leetcode.com/problems/diameter-of-binary-tree/)
+### 📅 Assigned Problems for Day 47 (27-10):
+- [Add Two Numbers](https://leetcode.com/problems/add-two-numbers/)
+- [Merge Two Binary Trees](https://leetcode.com/problems/merge-two-binary-trees/)
+- [Subsets](https://leetcode.com/problems/subsets/)
 
 ---
 
