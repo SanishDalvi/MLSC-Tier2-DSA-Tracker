@@ -1,11 +1,11 @@
 # 🚀 MLSC DSA Tracker
 
-> **Last Updated:** 28 Oct 2026, 01:39 AM IST (Auto-syncs every 45 min)
+> **Last Updated:** 28 Oct 2026, 04:09 AM IST (Auto-syncs every 45 min)
 
-### 📅 Assigned Problems for Day 47 (27-10):
-- [Add Two Numbers](https://leetcode.com/problems/add-two-numbers/)
-- [Merge Two Binary Trees](https://leetcode.com/problems/merge-two-binary-trees/)
-- [Subsets](https://leetcode.com/problems/subsets/)
+### 📅 Assigned Problems for Day 48 (28-10):
+- [Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/)
+- [Subsets II](https://leetcode.com/problems/subsets-ii/)
+- [Permutations](https://leetcode.com/problems/permutations/)
 
 ---
 
