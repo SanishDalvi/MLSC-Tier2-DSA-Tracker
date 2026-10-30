@@ -1,11 +1,11 @@
 # 🚀 MLSC DSA Tracker
 
-> **Last Updated:** 31 Oct 2026, 01:27 AM IST (Auto-syncs every 45 min)
+> **Last Updated:** 31 Oct 2026, 04:47 AM IST (Auto-syncs every 45 min)
 
-### 📅 Assigned Problems for Day 50 (30-10):
-- [Linked List Cycle](https://leetcode.com/problems/linked-list-cycle/)
-- [Combination Sum](https://leetcode.com/problems/combination-sum/)
-- [Combination Sum II](https://leetcode.com/problems/combination-sum-ii/)
+### 📅 Assigned Problems for Day 51 (31-10):
+- [Palindrome Linked List](https://leetcode.com/problems/palindrome-linked-list/)
+- [Letter Combinations of a Phone Number](https://leetcode.com/problems/letter-combinations-of-a-phone-number/)
+- [Generate Parentheses](https://leetcode.com/problems/generate-parentheses/)
 
 ---
 
