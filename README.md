@@ -1,11 +1,11 @@
 # 🚀 MLSC DSA Tracker
 
-> **Last Updated:** 03 Nov 2026, 01:43 AM IST (Auto-syncs every 45 min)
+> **Last Updated:** 03 Nov 2026, 04:39 AM IST (Auto-syncs every 45 min)
 
-### 📅 Assigned Problems for Day 52 (02-11):
-- [Maximum Depth of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/)
-- [Same Tree](https://leetcode.com/problems/same-tree/)
-- [Invert Binary Tree](https://leetcode.com/problems/invert-binary-tree/)
+### 📅 Assigned Problems for Day 53 (03-11):
+- [Symmetric Tree](https://leetcode.com/problems/symmetric-tree/)
+- [Path Sum](https://leetcode.com/problems/path-sum/)
+- [Median of Two Sorted Arrays](https://leetcode.com/problems/median-of-two-sorted-arrays/)
 
 ---
 
