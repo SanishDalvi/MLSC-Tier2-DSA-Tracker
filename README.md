@@ -1,11 +1,11 @@
 # 🚀 MLSC DSA Tracker
 
-> **Last Updated:** 11 Nov 2026, 10:08 PM IST (Auto-syncs every 45 min)
+> **Last Updated:** 12 Nov 2026, 03:37 AM IST (Auto-syncs every 45 min)
 
-### 📅 Assigned Problems for Day 58 (11-11):
-- [Kth Smallest Element in a BST](https://leetcode.com/problems/kth-smallest-element-in-a-bst/)
-- [Lowest Common Ancestor of a Binary Search Tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/)
-- [Lowest Common Ancestor of a Binary Tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/)
+### 📅 Assigned Problems for Day 59 (12-11):
+- [Binary Tree Right Side View](https://leetcode.com/problems/binary-tree-right-side-view/)
+- [Construct Binary Tree from Preorder and Inorder Traversal](https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/)
+- [N-Queens](https://leetcode.com/problems/n-queens/)
 
 ---
 
