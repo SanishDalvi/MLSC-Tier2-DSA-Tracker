@@ -1,11 +1,11 @@
 # 🚀 MLSC DSA Tracker
 
-> **Last Updated:** 13 Nov 2026, 01:18 AM IST (Auto-syncs every 45 min)
+> **Last Updated:** 13 Nov 2026, 03:22 AM IST (Auto-syncs every 45 min)
 
-### 📅 Assigned Problems for Day 59 (12-11):
-- [Binary Tree Right Side View](https://leetcode.com/problems/binary-tree-right-side-view/)
-- [Construct Binary Tree from Preorder and Inorder Traversal](https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/)
-- [N-Queens](https://leetcode.com/problems/n-queens/)
+### 📅 Assigned Problems for Day 60 (13-11):
+- [Flatten Binary Tree to Linked List](https://leetcode.com/problems/flatten-binary-tree-to-linked-list/)
+- [Path Sum II](https://leetcode.com/problems/path-sum-ii/)
+- [Sum Root to Leaf Numbers](https://leetcode.com/problems/sum-root-to-leaf-numbers/)
 
 ---
 
