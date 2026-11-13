@@ -1,11 +1,11 @@
 # 🚀 MLSC DSA Tracker
 
-> **Last Updated:** 13 Nov 2026, 09:12 PM IST (Auto-syncs every 45 min)
+> **Last Updated:** 14 Nov 2026, 02:58 AM IST (Auto-syncs every 45 min)
 
-### 📅 Assigned Problems for Day 60 (13-11):
-- [Flatten Binary Tree to Linked List](https://leetcode.com/problems/flatten-binary-tree-to-linked-list/)
-- [Path Sum II](https://leetcode.com/problems/path-sum-ii/)
-- [Sum Root to Leaf Numbers](https://leetcode.com/problems/sum-root-to-leaf-numbers/)
+### 📅 Assigned Problems for Day 61 (14-11):
+- [Delete Node in a BST](https://leetcode.com/problems/delete-node-in-a-bst/)
+- [Insert into a Binary Search Tree](https://leetcode.com/problems/insert-into-a-binary-search-tree/)
+- [Sudoku Solver](https://leetcode.com/problems/sudoku-solver/)
 
 ---
 
