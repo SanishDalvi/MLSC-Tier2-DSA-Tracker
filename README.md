@@ -1,19 +1,17 @@
 # 🚀 MLSC DSA Tracker
 
-> **Last Updated:** 15 Nov 2026, 01:38 AM IST (Auto-syncs every 45 min)
+> **Last Updated:** 15 Nov 2026, 05:28 AM IST (Auto-syncs every 45 min)
 
-### 📅 Assigned Problems for Day 61 (14-11):
-- [Delete Node in a BST](https://leetcode.com/problems/delete-node-in-a-bst/)
-- [Insert into a Binary Search Tree](https://leetcode.com/problems/insert-into-a-binary-search-tree/)
-- [Sudoku Solver](https://leetcode.com/problems/sudoku-solver/)
+### 🌴 Rest / Holiday Day (Sunday)
+No mandatory problems scheduled for today.
 
 ---
 
 ### 🏆 Team Leaderboard
 | Rank | Member | LeetCode Profile | Solved Today | Drive Status | Total All-Time Solved |
 | :---: | :--- | :--- | :---: | :--- | :---: |
-| #1 | **Sanish Dalvi** | [SanishDalvi](https://leetcode.com/SanishDalvi) | 0 | ❌ 0/3 (Pending) | 159 |
-| #2 | **Veerbhadra Mahant** | [Veerbhadra_Mahant](https://leetcode.com/Veerbhadra_Mahant) | 0 | ❌ 0/3 (Pending) | 95 |
-| #3 | **Tanvi Jadhav** | [tanvi_jadhav7](https://leetcode.com/tanvi_jadhav7) | 0 | ❌ 0/3 (Pending) | 31 |
-| #4 | **Nirav Neve** | [NotNirav](https://leetcode.com/NotNirav) | 0 | ❌ 0/3 (Pending) | 6 |
-| #5 | **Badal Dadwani** | [Badal0711](https://leetcode.com/Badal0711) | 0 | ❌ 0/3 (Pending) | 0 |
+| #1 | **Sanish Dalvi** | [SanishDalvi](https://leetcode.com/SanishDalvi) | 0 | 🌴 Sunday | 159 |
+| #2 | **Veerbhadra Mahant** | [Veerbhadra_Mahant](https://leetcode.com/Veerbhadra_Mahant) | 0 | 🌴 Sunday | 95 |
+| #3 | **Tanvi Jadhav** | [tanvi_jadhav7](https://leetcode.com/tanvi_jadhav7) | 0 | 🌴 Sunday | 31 |
+| #4 | **Nirav Neve** | [NotNirav](https://leetcode.com/NotNirav) | 0 | 🌴 Sunday | 6 |
+| #5 | **Badal Dadwani** | [Badal0711](https://leetcode.com/Badal0711) | 0 | 🌴 Sunday | 0 |
